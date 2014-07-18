@@ -1,4 +1,4 @@
 littlegreenmen
 ==============
 
-Little Green Men
+Little Green Men server
