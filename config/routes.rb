@@ -1,6 +1,8 @@
 Littlegreenmen::Application.routes.draw do
   resources :games
 
+  get 'games/:id/terrain' => 'games#terrain'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
