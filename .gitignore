@@ -14,3 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Doc generator temp files
+/.yardoc
+
+# Documentation
+/doc
