@@ -11,6 +11,8 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
@@ -20,3 +22,7 @@
 
 # Documentation
 /doc
+
+# Other unneeded files
+database.yml
+*~
