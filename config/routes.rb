@@ -5,11 +5,9 @@ Littlegreenmen::Application.routes.draw do
 
   resources :game_actions
 
-  resources :turns
-
-  resources :players
-
-  resources :games
+  resources :games do
+    resources :players, :turns
+  end
 
   get 'games/:id/terrain' => 'games#terrain'
   
