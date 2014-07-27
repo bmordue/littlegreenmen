@@ -1,4 +1,14 @@
 Littlegreenmen::Application.routes.draw do
+  resources :actors
+
+  resources :game_events
+
+  resources :game_actions
+
+  resources :turns
+
+  resources :players
+
   resources :games
 
   get 'games/:id/terrain' => 'games#terrain'
