@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140727194735) do
+ActiveRecord::Schema.define(version: 20140727195231) do
 
   create_table "actors", force: true do |t|
     t.datetime "created_at"
@@ -50,6 +50,9 @@ ActiveRecord::Schema.define(version: 20140727194735) do
     t.integer  "sequence"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "turn_id"
   end
+
+  add_index "turns", ["turn_id"], name: "index_turns_on_turn_id"
 
 end
