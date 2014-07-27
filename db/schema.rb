@@ -11,12 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140727104706) do
+ActiveRecord::Schema.define(version: 20140727194735) do
 
   create_table "actors", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "player_id"
   end
+
+  add_index "actors", ["player_id"], name: "index_actors_on_player_id"
 
   create_table "game_actions", force: true do |t|
     t.string   "description"
