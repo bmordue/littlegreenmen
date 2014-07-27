@@ -21,7 +21,6 @@ module Littlegreenmen
     # config.i18n.default_locale = :de
 
     # Include generated in static assets to be served
-    config.assets.enabled = true
     config.assets.path = Rails.root.join('doc')
 
   end
