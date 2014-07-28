@@ -1,10 +1,10 @@
 class TurnsController < ApplicationController
-  before_action :set_turn, only: [:show, :edit, :update, :destroy]
+  before_action :set_game, :set_turn, only: [:show, :edit, :update, :destroy]
 
   # GET /turns
   # GET /turns.json
   def index
-    @turns = Turn.all
+    @turns = @game.turns
   end
 
   # GET /turns/1
@@ -14,21 +14,22 @@ class TurnsController < ApplicationController
 
   # GET /turns/new
   def new
-    @turn = Turn.new
+    @turn = @game.turns.build
   end
 
   # GET /turns/1/edit
   def edit
+    @turn = @game.turns.find(params[:id])
   end
 
   # POST /turns
   # POST /turns.json
   def create
-    @turn = Turn.new(turn_params)
+    @turn = @game.turns.build(params[:turn])
 
     respond_to do |format|
       if @turn.save
-        format.html { redirect_to @turn, notice: 'Turn was successfully created.' }
+        format.html { redirect_to game_turns_url(@game), notice: 'Turn was successfully created.' }
         format.json { render action: 'show', status: :created, location: @turn }
       else
         format.html { render action: 'new' }
@@ -42,7 +43,7 @@ class TurnsController < ApplicationController
   def update
     respond_to do |format|
       if @turn.update(turn_params)
-        format.html { redirect_to @turn, notice: 'Turn was successfully updated.' }
+        format.html { redirect_to game_turns_url(@game), notice: 'Turn was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -56,7 +57,7 @@ class TurnsController < ApplicationController
   def destroy
     @turn.destroy
     respond_to do |format|
-      format.html { redirect_to turns_url }
+      format.html { redirect_to game_turns_url(@game) }
       format.json { head :no_content }
     end
   end
@@ -64,11 +65,15 @@ class TurnsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_turn
-      @turn = Turn.find(params[:id])
+      @turn = @game.turns.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def turn_params
       params.require(:turn).permit(:sequence)
     end
+
+    def set_game
+      @game = Game.find(params[:game_id])
+    end 
 end
