@@ -50,9 +50,9 @@ ActiveRecord::Schema.define(version: 20140727195231) do
     t.integer  "sequence"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "turn_id"
+    t.integer  "game_id"
   end
 
-  add_index "turns", ["turn_id"], name: "index_turns_on_turn_id"
+  add_index "turns", ["game_id"], name: "index_turns_on_game_id"
 
 end
