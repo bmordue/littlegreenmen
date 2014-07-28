@@ -13,6 +13,8 @@ Littlegreenmen::Application.routes.draw do
   
   get '/' => 'games#index'
 
+  get 'games/:id' => 'games#show', as: :game_turns
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
