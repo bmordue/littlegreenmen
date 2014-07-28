@@ -1,5 +1,6 @@
 class TurnsController < ApplicationController
-  before_action :set_game, :set_turn, only: [:show, :edit, :update, :destroy]
+  before_action :set_turn, only: [:show, :edit, :update, :destroy]
+  before_action :set_game
 
   # GET /turns
   # GET /turns.json
