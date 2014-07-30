@@ -14,9 +14,9 @@
     <% @turns.each do |turn| %>
       <tr>
         <td><%= turn.sequence %></td>
-        <td><%= link_to 'Show', turn %></td>
-        <td><%= link_to 'Edit', edit_turn_path(turn) %></td>
-        <td><%= link_to 'Destroy', turn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [@game, turn] %></td>
+        <td><%= link_to 'Edit', edit_game_turn_path(turn) %></td>
+        <td><%= link_to 'Destroy', [@game, turn], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,5 @@
 
 <br>
 
-<%= link_to 'New Turn', new_turn_path %>
+<%= link_to 'New Turn', new_game_turn_path %>
+<%= link_to 'Back', @game %>

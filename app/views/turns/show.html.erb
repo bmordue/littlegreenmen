@@ -5,5 +5,5 @@
   <%= @turn.sequence %>
 </p>
 
-<%= link_to 'Edit', edit_turn_path(@turn) %> |
-<%= link_to 'Back', turns_path %>
+<%= link_to 'Edit', edit_game_turn_path(@game, @turn) %> |
+<%= link_to 'Back', game_turns_path(@game) %>
