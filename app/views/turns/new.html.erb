@@ -1,5 +1,7 @@
 <h1>New turn for Game <%= @game.id %></h1>
 
+Current turn: <%= @game.current_turn %>
+
 <%= render 'form' %>
 
 <%= link_to 'Show', [@game, @turn]  %>

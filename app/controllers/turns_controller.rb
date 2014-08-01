@@ -1,6 +1,6 @@
 class TurnsController < ApplicationController
-  before_action :set_turn, only: [:show, :edit, :update, :destroy]
   before_action :set_game
+  before_action :set_turn, only: [:show, :edit, :update, :destroy]
 
   # GET /turns
   # GET /turns.json
@@ -15,7 +15,8 @@ class TurnsController < ApplicationController
 
   # GET /turns/new
   def new
-    @turn = @game.turns.build
+#    @game.inc_turn
+    @turn = @game.turns.build({:sequence => @game.current_turn})
   end
 
   # GET /turns/1/edit
@@ -26,7 +27,11 @@ class TurnsController < ApplicationController
   # POST /turns
   # POST /turns.json
   def create
-    @turn = @game.turns.build(params[:turn])
+    @game.inc_turn
+    logger.info "TurnsController:create, @game.current_turn = #{@game.current_turn}"
+    logger.info "TurnsController:create, params[:turn] = #{params[:turns]}"
+ #   params[:turn].merge(:sequence => @game.current_turn)    
+    @turn = @game.turns.build({:sequence => @game.current_turn})
 
     respond_to do |format|
       if @turn.save
@@ -71,7 +76,7 @@ class TurnsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def turn_params
-      params.require(:turn)
+      params.require(:turn).permit(:sequence)
     end
 
     def set_game
