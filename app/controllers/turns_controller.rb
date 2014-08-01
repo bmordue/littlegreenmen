@@ -71,7 +71,7 @@ class TurnsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def turn_params
-      params.require(:turn).permit(:sequence)
+      params.require(:turn)
     end
 
     def set_game
