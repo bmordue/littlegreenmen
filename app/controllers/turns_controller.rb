@@ -29,7 +29,7 @@ class TurnsController < ApplicationController
   def create
     @game.inc_turn
     logger.info "TurnsController:create, @game.current_turn = #{@game.current_turn}"
-    logger.info "TurnsController:create, params[:turn] = #{params[:turns]}"
+    logger.info "TurnsController:create, params[:turns] = #{params[:turns]}"
  #   params[:turn].merge(:sequence => @game.current_turn)    
     @turn = @game.turns.build({:sequence => @game.current_turn})
 

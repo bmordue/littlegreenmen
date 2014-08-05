@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :turn_id %><br />
+    <%= f.select :turn_id, Turn.find(:all)  %>
+  </div>
+
+  <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
