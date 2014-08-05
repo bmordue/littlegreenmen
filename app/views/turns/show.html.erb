@@ -5,5 +5,49 @@
   <%= @turn.sequence %>
 </p>
 
+<table>
+  <thead>
+    <tr>
+      <th>Game Actions</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @turn.game_actions.each do |ga| %>
+      <tr>
+        <td><%= ga.description %></td>
+        <td><%= link_to 'Show', [ga] %></td>
+        <td><%= link_to 'Edit', edit_game_action_path(ga) %></td>
+        <td><%= link_to 'Destroy', [ga], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Game Events</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @turn.game_events.each do |ge| %>
+      <tr>
+        <td><%= ge.description %></td>
+        <td><%= link_to 'Show', [ge] %></td>
+        <td><%= link_to 'Edit', edit_game_action_path(ge) %></td>
+        <td><%= link_to 'Destroy', [ge], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <%= link_to 'Edit', edit_game_turn_path(@game, @turn) %> |
 <%= link_to 'Back', game_turns_path(@game) %>
