@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  turn: 1
-  terrain: MyText
-
-two:
-  turn: 1
-  terrain: MyText
