@@ -14,7 +14,7 @@
   <tbody>
     <% @games.each do |game| %>
       <tr>
-        <td><%= game.turn %></td>
+        <td><%= game.current_turn %></td>
         <td><%= game.terrain %></td>
         <td><%= link_to 'Show', game %></td>
         <td><%= link_to 'Edit', edit_game_path(game) %></td>
