@@ -1,0 +1,24 @@
+actor1:
+   id: 1
+   player_id: 1
+
+actor2:
+   id: 2
+   player_id: 1
+
+actor3:
+   id: 3
+   player_id: 1
+
+actor4:
+   id: 4
+   player_id: 2
+
+actor5:
+   id: 5
+   player_id: 2
+
+actor6:
+   id: 6
+   player_id: 2
+
