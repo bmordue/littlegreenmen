@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 require 'active_record/fixtures'
-ActiveRecord::Fixtures.create_fixtures(Rails.root.join('spec/fixtures'), 'actors.yml')
-ActiveRecord::Fixtures.create_fixtures(Rails.root.join('spec/fixtures'), 'game_actions.yml')
-ActiveRecord::Fixtures.create_fixtures(Rails.root.join('spec/fixtures'), 'game_events.yml')
-ActiveRecord::Fixtures.create_fixtures(Rails.root.join('spec/fixtures'), 'games.yml')
-ActiveRecord::Fixtures.create_fixtures(Rails.root.join('spec/fixtures'), 'players.yml')
-ActiveRecord::Fixtures.create_fixtures(Rails.root.join('spec/fixtures'), 'turns.yml')
+ActiveRecord::Fixtures.create_fixtures(Rails.root.join('spec/fixtures'), 'actors')
+ActiveRecord::Fixtures.create_fixtures(Rails.root.join('spec/fixtures'), 'game_actions')
+ActiveRecord::Fixtures.create_fixtures(Rails.root.join('spec/fixtures'), 'game_events')
+ActiveRecord::Fixtures.create_fixtures(Rails.root.join('spec/fixtures'), 'games')
+ActiveRecord::Fixtures.create_fixtures(Rails.root.join('spec/fixtures'), 'players')
+ActiveRecord::Fixtures.create_fixtures(Rails.root.join('spec/fixtures'), 'turns')
