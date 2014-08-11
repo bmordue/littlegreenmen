@@ -1,4 +1,4 @@
 json.array!(@turns) do |turn|
   json.extract! turn, :sequence
-  json.url turn_url(turn, format: :json)
+  json.url game_turn_url(@game, turn, format: :json)
 end
