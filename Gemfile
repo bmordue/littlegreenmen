@@ -6,7 +6,7 @@ ruby '2.0.0'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-group :development, :test do
+group :development, :test, :production do
    gem 'sqlite3', '1.3.8'
    gem 'railroady'
    gem 'rspec-rails', '2.13.1'
@@ -56,7 +56,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # For deployment to Heroku
-group :production do
+group :heroku do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
