@@ -16,7 +16,6 @@
         <td><%= turn.sequence %></td>
         <td><%= link_to 'Show', [@game, turn] %></td>
         <td><%= link_to 'Edit', edit_game_turn_path(@game, turn) %></td>
-        <td><%= link_to 'Destroy', [@game, turn], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
