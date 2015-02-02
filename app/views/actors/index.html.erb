@@ -3,6 +3,9 @@
 <table>
   <thead>
     <tr>
+      <th>id</th>
+      <th>x</th>
+      <th>y</th>
       <th></th>
       <th></th>
       <th></th>
@@ -12,6 +15,9 @@
   <tbody>
     <% @actors.each do |actor| %>
       <tr>
+	<td><%= actor.id %></td>
+	<td><%= actor.x %></td>
+	<td><%= actor.y %></td>
         <td><%= link_to 'Show', actor %></td>
         <td><%= link_to 'Edit', edit_actor_path(actor) %></td>
         <td><%= link_to 'Destroy', actor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
