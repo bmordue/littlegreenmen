@@ -1,0 +1,51 @@
+          Prefix Verb   URI Pattern                                Controller#Action
+          actors GET    /actors(.:format)                          actors#index
+                 POST   /actors(.:format)                          actors#create
+       new_actor GET    /actors/new(.:format)                      actors#new
+      edit_actor GET    /actors/:id/edit(.:format)                 actors#edit
+           actor GET    /actors/:id(.:format)                      actors#show
+                 PATCH  /actors/:id(.:format)                      actors#update
+                 PUT    /actors/:id(.:format)                      actors#update
+                 DELETE /actors/:id(.:format)                      actors#destroy
+     game_events GET    /game_events(.:format)                     game_events#index
+                 POST   /game_events(.:format)                     game_events#create
+  new_game_event GET    /game_events/new(.:format)                 game_events#new
+ edit_game_event GET    /game_events/:id/edit(.:format)            game_events#edit
+      game_event GET    /game_events/:id(.:format)                 game_events#show
+                 PATCH  /game_events/:id(.:format)                 game_events#update
+                 PUT    /game_events/:id(.:format)                 game_events#update
+                 DELETE /game_events/:id(.:format)                 game_events#destroy
+    game_actions GET    /game_actions(.:format)                    game_actions#index
+                 POST   /game_actions(.:format)                    game_actions#create
+ new_game_action GET    /game_actions/new(.:format)                game_actions#new
+edit_game_action GET    /game_actions/:id/edit(.:format)           game_actions#edit
+     game_action GET    /game_actions/:id(.:format)                game_actions#show
+                 PATCH  /game_actions/:id(.:format)                game_actions#update
+                 PUT    /game_actions/:id(.:format)                game_actions#update
+                 DELETE /game_actions/:id(.:format)                game_actions#destroy
+    game_players GET    /games/:game_id/players(.:format)          players#index
+                 POST   /games/:game_id/players(.:format)          players#create
+ new_game_player GET    /games/:game_id/players/new(.:format)      players#new
+edit_game_player GET    /games/:game_id/players/:id/edit(.:format) players#edit
+     game_player GET    /games/:game_id/players/:id(.:format)      players#show
+                 PATCH  /games/:game_id/players/:id(.:format)      players#update
+                 PUT    /games/:game_id/players/:id(.:format)      players#update
+                 DELETE /games/:game_id/players/:id(.:format)      players#destroy
+      game_turns GET    /games/:game_id/turns(.:format)            turns#index
+                 POST   /games/:game_id/turns(.:format)            turns#create
+   new_game_turn GET    /games/:game_id/turns/new(.:format)        turns#new
+  edit_game_turn GET    /games/:game_id/turns/:id/edit(.:format)   turns#edit
+       game_turn GET    /games/:game_id/turns/:id(.:format)        turns#show
+                 PATCH  /games/:game_id/turns/:id(.:format)        turns#update
+                 PUT    /games/:game_id/turns/:id(.:format)        turns#update
+                 DELETE /games/:game_id/turns/:id(.:format)        turns#destroy
+           games GET    /games(.:format)                           games#index
+                 POST   /games(.:format)                           games#create
+        new_game GET    /games/new(.:format)                       games#new
+       edit_game GET    /games/:id/edit(.:format)                  games#edit
+            game GET    /games/:id(.:format)                       games#show
+                 PATCH  /games/:id(.:format)                       games#update
+                 PUT    /games/:id(.:format)                       games#update
+                 DELETE /games/:id(.:format)                       games#destroy
+                 GET    /games/:id/terrain(.:format)               games#terrain
+                 GET    /                                          games#index
