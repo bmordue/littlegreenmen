@@ -26,3 +26,7 @@
 # Other unneeded files
 database.yml
 *~
+
+# Project files
+.buildpath
+.project
