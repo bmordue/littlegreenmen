@@ -11,7 +11,7 @@
   </thead>
 
   <tbody>
-    <% @turns.each do |turn| %>
+    <% @turns.order('sequence').each do |turn| %>
       <tr>
         <td><%= turn.sequence %></td>
         <td><%= link_to 'Show', [@game, turn] %></td>
