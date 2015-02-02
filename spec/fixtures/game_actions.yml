@@ -1,75 +1,60 @@
 ac_game1-actor1turn1:
-   id: 1
    description: "{ actor: 1, moves: 'ruldruldrl' }"
-   turn_id: 1
+   turn: firstgameturns1
 
 ac_game1-actor1turn2:
-   id: 2
    description: "{ actor: 1, moves: 'ruldruldrl' }"
-   turn_id: 2
+   turn: firstgameturns2
 
 ac_game1-actor1turn3:
-   id: 3
    description: "{ actor: 1, moves: 'ruldruldrl' }"
-   turn_id: 3
+   turn: firstgameturns3
 
 ac_game1-actor2turn1:
-   id: 4
    description: "{ actor: 2, moves: 'ruldruldrl' }"
-   turn_id: 1
+   turn: firstgameturns1
 
 ac_game1-actor2turn2:
-   id: 5
    description: "{ actor: 2, moves: 'ruldruldrl' }"
-   turn_id: 2
+   turn: firstgameturns2
 
 ac_game1-actor2turn3:
-   id: 6
    description: "{ actor: 2, moves: 'ruldruldrl' }"
-   turn_id: 3
+   turn: firstgameturns3
 
 ac_game1-actor3turn1:
-   id: 7
    description: "{ actor: 3, moves: 'ruldruldrl' }"
-   turn_id: 1
+   turn: firstgameturns1
 
 ac_game1-actor3turn2:
-   id: 8
    description: "{ actor: 3, moves: 'ruldruldrl' }"
-   turn_id: 2
+   turn: firstgameturns2
 
 ac_game1-actor3turn3:
-   id: 9
    description: "{ actor: 3, moves: 'ruldruldrl' }"
-   turn_id: 3
+   turn: firstgameturns3
 
 ac_game1-actor4turn1:
-   id: 10
    description: "{ actor: 4, moves: 'ruldruldrl' }"
-   turn_id: 1
+   turn: firstgameturns1
 
 ac_game1-actor4turn2:
-   id: 11
    description: "{ actor: 4, moves: 'ruldruldrl' }"
-   turn_id: 2
+   turn: firstgameturns2
 
 ac_game1-actor4turn3:
-   id: 12
    description: "{ actor: 4, moves: 'ruldruldrl' }"
-   turn_id: 3
+   turn: firstgameturns3
 
 ac_game1-actor5turn1:
-   id: 13
    description: "{ actor: 5, moves: 'ruldruldrl' }"
-   turn_id: 1
+   turn: firstgameturns1
 
 ac_game1-actor5turn2:
-   id: 14
    description: "{ actor: 5, moves: 'ruldruldrl' }"
-   turn_id: 2
+   turn: firstgameturns2
 
 ac_game1-actor5turn3:
-   id: 15
    description: "{ actor: 5, moves: 'ruldruldrl' }"
-   turn_id: 3
+   turn: firstgameturns3
 

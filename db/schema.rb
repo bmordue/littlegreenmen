@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140805192831) do
+ActiveRecord::Schema.define(version: 20150201212720) do
 
   create_table "actors", force: true do |t|
     t.datetime "created_at"
@@ -46,7 +46,10 @@ ActiveRecord::Schema.define(version: 20140805192831) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "game_id"
   end
+
+  add_index "players", ["game_id"], name: "index_players_on_game_id"
 
   create_table "turns", force: true do |t|
     t.integer  "sequence"
