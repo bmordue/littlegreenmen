@@ -3,7 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Description</th>
+      <th>Actor</th>
+      <th>Current position</th>
+      <th>Destination</th>
       <th></th>
       <th></th>
       <th></th>
@@ -13,7 +15,10 @@
   <tbody>
     <% @game_actions.each do |game_action| %>
       <tr>
-        <td><%= game_action.description %></td>
+        <% actor = Actor.find(game_action.actor_id) %>
+        <td><%= actor.id %></td>
+        <td>(<%= actor.x %>, <%= actor.y %>)</td>
+        <td>(<%= game_action.moveto_x %>, <%= game_action.moveto_y %>)</td>
         <td><%= link_to 'Show', game_action %></td>
         <td><%= link_to 'Edit', edit_game_action_path(game_action) %></td>
         <td><%= link_to 'Destroy', game_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
