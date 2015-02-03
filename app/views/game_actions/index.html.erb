@@ -16,7 +16,7 @@
     <% @game_actions.each do |game_action| %>
       <tr>
         <% actor = Actor.find(game_action.actor_id) %>
-        <td><%= actor.id %></td>
+        <td><%= link_to actor.id, actor %></td>
         <td>(<%= actor.x %>, <%= actor.y %>)</td>
         <td>(<%= game_action.moveto_x %>, <%= game_action.moveto_y %>)</td>
         <td><%= link_to 'Show', game_action %></td>
