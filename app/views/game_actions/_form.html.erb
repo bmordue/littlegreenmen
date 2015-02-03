@@ -13,13 +13,24 @@
 
   <div class="field">
     <%= f.label :turn_id %><br />
-    <%= f.select :turn_id, Turn.find(:all)  %>
+    <%= f.select :turn_id, Turn.find(:all).order('sequence').map{ |t| [t.sequence, t.id]}  %>
   </div>
 
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.label :moveto_x %><br>
+    <%= f.text_field :moveto_x %>
   </div>
+
+  <div class="field">
+    <%= f.label :moveto_y %><br>
+    <%= f.text_field :moveto_y %>
+  </div>
+
+  <div class="field">
+    <%= f.label :actor_id %><br>
+    <%= f.select :actor_id, Actor.find(:all).map{ |a| [a.id, a.id] } %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
