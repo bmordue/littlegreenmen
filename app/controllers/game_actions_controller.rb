@@ -69,6 +69,6 @@ class GameActionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def game_action_params
-      params.require(:game_action).permit(:description, :moveto_x, :moveto_y, :actor_id, :turn_id)
+      params.require(:game_action).permit(:moveto_x, :moveto_y, :actor_id, :turn_id)
     end
 end
