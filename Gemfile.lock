@@ -54,6 +54,7 @@ GEM
       mime-types (>= 1.16, < 3)
       nokogiri (~> 1.5)
       rails (>= 3, < 5)
+    database_cleaner (1.4.1)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.1)
@@ -172,6 +173,7 @@ DEPENDENCIES
   capybara (= 2.1.0)
   coffee-rails (~> 4.0.0)
   cucumber-rails
+  database_cleaner
   factory_girl_rails
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
