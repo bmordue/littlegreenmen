@@ -17,6 +17,7 @@ group :test do
   gem 'capybara', '2.1.0'
   gem 'shoulda-matchers' # https://semaphoreci.com/blog/2013/08/14/setting-up-bdd-stack-on-a-new-rails-4-application.html
   gem 'cucumber-rails', :require => false
+  gem 'cucumber-api-steps', :require => false
   gem 'database_cleaner'
 end
 
