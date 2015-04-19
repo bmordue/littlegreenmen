@@ -15,6 +15,12 @@ end
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
+  gem 'shoulda-matchers' # https://semaphoreci.com/blog/2013/08/14/setting-up-bdd-stack-on-a-new-rails-4-application.html
+  gem 'cucumber-rails'
+end
+
+group :development, :test do
+  gem 'factory_girl_rails' # https://semaphoreci.com/blog/2013/08/14/setting-up-bdd-stack-on-a-new-rails-4-application.html
 end
 
 # Use SCSS for stylesheets
