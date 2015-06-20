@@ -30,3 +30,4 @@ database.yml
 # Project files
 .buildpath
 .project
+*.komodoproject
