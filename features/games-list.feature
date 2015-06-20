@@ -5,5 +5,7 @@ Feature: Games list
  
 Scenario: List of available games
 
-  When the client requests GET /games
-  Then the response should be "200"
+    When I send and accept JSON
+    And I send a GET request to "/games"
+    Then the response status should be "200"
+
